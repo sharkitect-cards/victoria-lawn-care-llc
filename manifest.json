@@ -1,0 +1,19 @@
+{
+  "name": "{{PERSON_FULL_NAME}} | {{COMPANY_NAME}}",
+  "short_name": "My Card",
+  "description": "Digital business card for {{PERSON_FULL_NAME}}",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1A1A1A",
+  "theme_color": "#1A1A1A",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
