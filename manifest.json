@@ -1,7 +1,7 @@
 {
-  "name": "{{PERSON_FULL_NAME}} | {{COMPANY_NAME}}",
+  "name": "Victoria Lawn Care LLC",
   "short_name": "My Card",
-  "description": "Digital business card for {{PERSON_FULL_NAME}}",
+  "description": "Digital business card for Victoria Lawn Care LLC",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
@@ -10,9 +10,9 @@
   "theme_color": "#1A1A1A",
   "icons": [
     {
-      "src": "logo.svg",
+      "src": "logo.jpg",
       "sizes": "any",
-      "type": "image/svg+xml",
+      "type": "image/jpeg",
       "purpose": "any"
     }
   ]
