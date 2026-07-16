@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>{{PERSON_FULL_NAME}} | {{COMPANY_NAME}}</title>
-    <meta name="description" content="{{PERSON_FULL_NAME}} - {{PERSON_TITLE}}, {{COMPANY_NAME}}. ">
+    <title>Victoria Lawn Care LLC</title>
+    <meta name="description" content="Victoria Lawn Care LLC - Lawn Care & Landscaping, Kansas City Metro.">
 
     <!-- PWA / Home Screen support -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -13,8 +13,8 @@
     <link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#1A1A1A">
-    <link rel="apple-touch-icon" href="logo.svg">
-    <link rel="icon" href="logo.svg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    <link rel="icon" href="logo.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +23,8 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --accent: {{COMPANY_ACCENT_COLOR}};
-            --accent-rgb: {{COMPANY_ACCENT_RGB}};
+            --accent: #3EA86B;
+            --accent-rgb: 62, 168, 107;
             --bg: #1A1A1A;
             --text-primary: #FFFFFF;
             --text-secondary: #C7CCD4;
@@ -44,7 +44,6 @@
             overflow-x: hidden;
         }
 
-        /* Subtle grid background — adjust opacity/size per brand */
         body::before {
             content: '';
             position: fixed;
@@ -72,7 +71,6 @@
                 0 20px 60px rgba(0, 0, 0, 0.4);
         }
 
-        /* Top accent line */
         .card::before {
             content: '';
             position: absolute;
@@ -112,13 +110,6 @@
             font-size: 14px;
             color: var(--text-secondary);
             margin-bottom: 4px;
-        }
-
-        .company {
-            font-weight: 500;
-            font-size: 15px;
-            color: var(--accent);
-            margin-bottom: 20px;
         }
 
         .divider {
@@ -235,7 +226,6 @@
         .save-btn svg { width: 18px; height: 18px; fill: var(--text-primary); }
         .qr-btn svg { width: 18px; height: 18px; fill: var(--accent); }
 
-        /* QR Code overlay */
         .qr-overlay {
             display: none;
             position: fixed;
@@ -297,54 +287,23 @@
 <body>
     <div class="card">
         <div class="logo">
-            <img src="logo.svg" alt="{{COMPANY_NAME}}">
+            <img src="logo.jpg" alt="Victoria Lawn Care LLC">
         </div>
 
-        <div class="name">{{PERSON_FULL_NAME}}</div>
-        <div class="title">{{PERSON_TITLE}}</div>
-        <div class="company">{{COMPANY_NAME}}</div>
+        <div class="name">Victoria Lawn Care LLC</div>
+        <div class="title">Lawn Care &amp; Landscaping</div>
 
         <div class="divider"></div>
 
-        <div class="tagline">{{COMPANY_TAGLINE}}</div>
+        <div class="tagline">Your Yard Done Right The First Time</div>
 
-        <div class="bio">{{COMPANY_DESCRIPTOR}}</div>
+        <div class="bio">Lawn Mowing &bull; Edging &amp; Trimming &bull; Yard Cleanup &bull; Professional Service<br>Kansas City Metro</div>
 
         <div class="contact-links">
-            <a href="tel:{{PERSON_PHONE_E164}}" class="contact-link">
+            <a href="tel:+18165203776" class="contact-link">
                 <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                <span>{{PERSON_PHONE_DISPLAY}}</span>
+                <span>(816) 520-3776</span>
             </a>
-            <!-- OFFICE_PHONE_START -->
-            <a href="tel:{{COMPANY_OFFICE_PHONE_E164}}" class="contact-link">
-                <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zm-2 12H4v-2h6v2zm0-4H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
-                <span>{{COMPANY_OFFICE_PHONE_DISPLAY}}</span>
-            </a>
-            <!-- OFFICE_PHONE_END -->
-
-            <a href="mailto:{{PERSON_EMAIL}}" class="contact-link">
-                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                <span>{{PERSON_EMAIL}}</span>
-            </a>
-
-            <!-- WEBSITE_START -->
-            <a href="{{COMPANY_WEBSITE_URL}}" target="_blank" rel="noopener" class="contact-link">
-                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 014.33-3.56A15.65 15.65 0 008.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
-                <span>{{COMPANY_WEBSITE_DISPLAY}}</span>
-            </a>
-            <!-- WEBSITE_END -->
-            <!-- OFFICE_ADDRESS_START -->
-            <a href="{{COMPANY_OFFICE_ADDR_MAPS_URL}}" target="_blank" rel="noopener" class="contact-link">
-                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                <span>{{COMPANY_OFFICE_ADDR}}</span>
-            </a>
-            <!-- OFFICE_ADDRESS_END -->
-            <!-- BOOKING_LINK_START -->
-            <a href="{{PERSON_BOOKING_URL}}" target="_blank" rel="noopener" class="contact-link">
-                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
-                <span>Book a meeting</span>
-            </a>
-            <!-- BOOKING_LINK_END -->
         </div>
 
         <div class="btn-row">
@@ -358,7 +317,7 @@
             </button>
         </div>
 
-        <div class="footer">Powered by <a href="https://www.sharkitectdigital.com" target="_blank" rel="noopener" style="color:#29ABE2;text-decoration:none;">Sharkitect</a></div>
+        <div class="footer">Powered by <a href="https://www.sharkitectdigital.com" target="_blank" rel="noopener" style="color:#3EA86B;text-decoration:none;">Sharkitect</a></div>
     </div>
 
     <!-- QR Code Overlay -->
@@ -373,32 +332,15 @@
 
     <script>
         function saveContact() {
-            const _officePhone = `{{COMPANY_OFFICE_PHONE_DISPLAY}}`;
-            const _photoB64 = `{{PERSON_PHOTO_B64}}`;  // optional headshot JPEG, base64 only (no data: prefix). Empty string omits vCard PHOTO.
-            const _officeAddr = `{{COMPANY_OFFICE_ADDR}}`;
-            const _website = `{{COMPANY_WEBSITE_URL}}`;
-            const _tagline = `{{COMPANY_TAGLINE}}`;
-            const _bio = `{{COMPANY_DESCRIPTOR}}`;
-            const _ap = _officeAddr ? _officeAddr.split(',').map(s => s.trim()) : [];
-            const _adrLine = _officeAddr
-                ? `ADR;TYPE=WORK:;;${_ap[0] || ''};${_ap[1] || ''};${_ap[2] || ''};${_ap[3] || ''};USA`
-                : '';
-            const _noteStr = [_tagline, _bio].filter(Boolean).join(' | ');
-
             const vcard = [
                 `BEGIN:VCARD`,
                 `VERSION:3.0`,
-                `N:{{PERSON_LAST_NAME}};{{PERSON_FIRST_NAME}};;;`,
-                `FN:{{PERSON_FULL_NAME}}`,
-                `ORG:{{COMPANY_NAME}}`,
-                `TITLE:{{PERSON_TITLE}}`,
-                `TEL;TYPE=CELL:{{PERSON_PHONE_DISPLAY}}`,
-                _officePhone ? `TEL;TYPE=WORK:${_officePhone}` : '',
-                `EMAIL;TYPE=WORK:{{PERSON_EMAIL}}`,
-                _website ? `URL:${_website}` : '',
-                _adrLine,
-                _noteStr ? `NOTE:${_noteStr}` : '',
-                _photoB64 ? `PHOTO;ENCODING=b;TYPE=JPEG:${_photoB64}` : '',
+                `N:;Victoria Lawn Care LLC;;;`,
+                `FN:Victoria Lawn Care LLC`,
+                `ORG:Victoria Lawn Care LLC`,
+                `TITLE:Lawn Care & Landscaping`,
+                `TEL;TYPE=CELL:(816) 520-3776`,
+                `NOTE:Your Yard Done Right The First Time | Lawn Mowing, Edging & Trimming, Yard Cleanup, Professional Service - Kansas City Metro`,
                 `END:VCARD`
             ].filter(Boolean).join('\r\n');
 
@@ -406,7 +348,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = '{{PERSON_FULL_NAME_DASH}}.vcf';
+            a.download = 'victoria-lawn-care-llc.vcf';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -416,8 +358,6 @@
         function toggleQR() {
             document.getElementById('qrOverlay').classList.toggle('active');
         }
-
-        function generateQR() { /* replaced by direct img tag */ }
         </script>
 </body>
 </html>
